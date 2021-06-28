@@ -1,25 +1,40 @@
 package com.genrics;
 
 public class FindMaximum {
-	    public static void main(String[] args) {
-	        System.out.println("Welcome to Find Maximum Problem using Generics");
-	        Float p = 20.85f, q = 90.55f, r =80.98f;
-	        testMaximum (p,q,r);
+	
+	    public static void  main(String[] args) {
+	        System.out.println("Welcome to Generic Program.");
+	        Integer a = 20, b = 42, c =65;
+	        Float x = 2.3f, y =7.8f , z = 6.7f;
+	        String l = "Apple" , m = "Banana" , n = "Orange";
+
+	        FindMaximum.getMaximum(a,b,c);
+	        FindMaximum.getMaximum(x,y,z);
+	        FindMaximum.getMaximum(l,m,n);
 	    }
 
-	    private static void testMaximum(Float p, Float q, Float r) {
-	    	 Float max = p;
-		        if(q.compareTo(p)>0){
-		            max = q;
-		        }
-		        if(r.compareTo(max)>0){
-		            max = r;
-		        }
-		        System.out.println("Maximum Number is: "+max);
-	    	
-		}
+	    private static <T extends Comparable> void getMaximum(T a, T b, T c) {
+
+	        T max = a;
+	        if(b.compareTo(a)>0){
+	            max = b;
+	        }
+	        if(c.compareTo(max)>0){
+	            max = c;
+	        }
+
+	        System.out.println("Maximum ::"+max);
+
+
+	    }
+
+
+
+	    
 
 	}
+
+
 
 
 
