@@ -1,16 +1,31 @@
 package com.genrics;
 
-public class FindMaximum {
-	
+public class FindMaximum <T extends Comparable> {
+	    T var1, var2, var3;
+
+	    public FindMaximum(T var1, T var2, T var3) {
+	        this.var1 = var1;
+	        this.var2 = var2;
+	        this.var3 = var3;
+	    }
+
+
+
 	    public static void  main(String[] args) {
 	        System.out.println("Welcome to Generic Program.");
-	        Integer a = 20, b = 42, c =65;
-	        Float x = 2.3f, y =7.8f , z = 6.7f;
+	        
+	        Integer a = 21, b = 42, c =67;
+	        Float x = 3.5f, y =9.8f , z = 5.8f;
 	        String l = "Apple" , m = "Banana" , n = "Orange";
+	        
+	        new FindMaximum<>(a,b,c).max();
+	        new FindMaximum<>(x,y,z).max();
+	        new FindMaximum<>(l,m,n).max();
+	    }
 
-	        FindMaximum.getMaximum(a,b,c);
-	        FindMaximum.getMaximum(x,y,z);
-	        FindMaximum.getMaximum(l,m,n);
+	    private void max() {
+	    	FindMaximum.getMaximum(var1,var2,var3);
+
 	    }
 
 	    private static <T extends Comparable> void getMaximum(T a, T b, T c) {
@@ -25,16 +40,14 @@ public class FindMaximum {
 
 	        System.out.println("Maximum ::"+max);
 
-
 	    }
+	}
 
 
 
 	    
 
-	}
-
-
+	
 
 
 
