@@ -3,21 +3,21 @@ package com.genrics;
 public class FindMaximum {
 	    public static void main(String[] args) {
 	        System.out.println("Welcome to Find Maximum Problem using Generics");
-	        Integer a = 20, b = 50, c =80;
-	        testMaximum (a,b,c);
+	        String e = "Bangalore" , f = "GOa" , g = "Mumbai";
+	        testMaximum (e,f,g);
 	    }
 
-	    private static void testMaximum(Integer a, Integer b, Integer c) {
-	        Integer max = a;
-	        if(b.compareTo(a)>0){
-	            max = b;
-	        }
-	        if(c.compareTo(max)>0){
-	            max = c;
-	        }
-	        System.out.println("Maximum Number is::"+max);
-	    }
-
+	    private static void testMaximum(String e, String f, String g) {
+	    	 String max = e;
+		        if(f.compareTo(e)>0){
+		            max = f;
+		        }
+		        if(g.compareTo(max)>0){
+		            max = g;
+		        }
+		        System.out.println("Maximum Number is: "+max);
+	    	
+		}
 
 	}
 
